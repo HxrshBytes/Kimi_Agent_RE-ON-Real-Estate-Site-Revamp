@@ -4,11 +4,11 @@ import { X, MapPin, ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react
 const properties = [
   {
     id: 1,
-    title: 'The City Apartment',
-    location: 'Bengaluru',
-    image: '/gallery_apartment.jpg',
-    desc: 'A luminous high-rise residence with panoramic city views, curated interiors, and seamless indoor-outdoor living.',
-    tag: 'Apartment · 3 BHK',
+    title: 'Navya Greens',
+    location: 'Navi Mumbai',
+    image: '/gallery_navya_greens.jpg',
+    desc: 'A ecosystem more then plotted development where nature , arctitechture and community exist in perfect harmony.',
+    tag: ' Plots ',
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const properties = [
       '/gallery_ornate_1bhk.jpg',
       '/gallery_ornate_floorplan.png',
     ],
-    desc: 'An ultimate rooftop penthouse at Square Ornate featuring a private terrace garden, direct lift access, play areas, and stunning urban views.',
+    desc: 'An ultimate rooftop Apartment at Square Ornate featuring a private terrace garden, direct lift access, play areas, and stunning urban views.',
     tag: 'Apartment · 1 & 2 BHK',
   },
   {
@@ -153,7 +153,7 @@ export default function GallerySection() {
       {active && (
         <div
           className="fixed inset-0 z-[2000] flex items-center justify-center p-4 lg:p-8"
-          style={{ animation: closing ? 'backdropOut 0.35s ease forwards' : 'backdropIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both' }}
+          style={{ animation: closing ? 'backdropOut 0.35s ease forwards' : 'backdropIn 0.4s ease forwards' }}
           onClick={closePopup}
         >
           {/* Blurred backdrop */}
@@ -161,20 +161,20 @@ export default function GallerySection() {
 
           {/* Popup panel */}
           <div
-            className="relative z-10 w-full max-w-[96vw] lg:max-w-[94vw] h-[92vh] lg:h-[90vh] rounded-[2.5rem] overflow-hidden
-                        shadow-[0_80px_160px_rgba(0,0,0,0.95),0_0_0_1px_rgba(255,255,255,0.08)]
-                        flex flex-col lg:flex-row bg-reon-greenDark"
-            style={{ animation: closing ? 'popupOut 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards' : 'popupIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both' }}
+            className="relative z-10 w-full max-w-[92vw] lg:max-w-[88vw] rounded-[2rem] overflow-hidden
+                        shadow-[0_80px_160px_rgba(0,0,0,0.9),0_0_0_1px_rgba(255,255,255,0.06)]
+                        flex flex-col lg:flex-row"
+            style={{ animation: closing ? 'popupOut 0.35s cubic-bezier(0.4,0,1,1) forwards' : 'popupIn 0.5s cubic-bezier(0.22,1,0.36,1) forwards' }}
             onClick={(e) => e.stopPropagation()}
           >
             {/* ── LEFT: BIG IMAGE ── */}
-            <div className="relative lg:w-[60%] h-[42vh] lg:h-full overflow-hidden flex-shrink-0">
+            <div className="relative lg:w-[62%] h-[50vh] lg:h-[88vh] overflow-hidden flex-shrink-0">
               <img
                 key={imageToDisplay}
                 src={imageToDisplay}
                 alt={active.title}
                 className="w-full h-full object-cover"
-                style={{ animation: 'imageReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) both' }}
+                style={{ animation: 'imageReveal 0.6s cubic-bezier(0.22,1,0.36,1) both' }}
               />
 
               {/* Internal Image Navigation Arrows */}
@@ -211,37 +211,28 @@ export default function GallerySection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
 
               {/* Tag badge */}
-              <div 
-                className="absolute top-6 left-6 px-4 py-1.5 rounded-full bg-reon-red/90 backdrop-blur-sm text-white text-xs font-semibold uppercase tracking-widest"
-                style={{ animation: 'badgePop 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both' }}
-              >
+              <div className="absolute top-6 left-6 px-4 py-1.5 rounded-full bg-reon-red/90 backdrop-blur-sm text-white text-xs font-semibold uppercase tracking-widest">
                 {active.tag}
               </div>
 
               {/* Bottom location strip */}
-              <div 
-                className="absolute bottom-6 left-6 flex items-center gap-2 text-white/80 text-sm"
-                style={{ animation: 'slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both' }}
-              >
+              <div className="absolute bottom-6 left-6 flex items-center gap-2 text-white/80 text-sm">
                 <MapPin className="w-4 h-4 text-reon-red" />
                 <span className="uppercase tracking-widest text-xs">{active.location}</span>
               </div>
 
               {/* Slide counter */}
-              <div 
-                className="absolute bottom-6 right-6 text-white/40 text-xs font-mono tracking-widest"
-                style={{ animation: 'slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both' }}
-              >
+              <div className="absolute bottom-6 right-6 text-white/40 text-xs font-mono tracking-widest">
                 {String(activeIndex! + 1).padStart(2, '0')} / {String(properties.length).padStart(2, '0')}
               </div>
             </div>
 
             {/* ── RIGHT: CONTENT PANEL ── */}
-            <div className="lg:w-[40%] bg-reon-greenDark flex flex-col justify-between px-8 lg:px-12 py-10 lg:py-12 h-[50vh] lg:h-full overflow-y-auto scrollbar-thin">
+            <div className="lg:w-[38%] bg-reon-greenDark flex flex-col justify-between px-10 py-12 min-h-[44vh] lg:min-h-0">
               {/* Top area */}
               <div>
                 {/* Close button */}
-                <div className="flex justify-end mb-6">
+                <div className="flex justify-end mb-8">
                   <button
                     onClick={closePopup}
                     className="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-white/60
@@ -253,30 +244,30 @@ export default function GallerySection() {
 
                 {/* Property name */}
                 <h2
-                  className="font-display font-black text-reon-cream leading-[0.95] mb-6"
-                  style={{ fontSize: 'clamp(2rem, 3.2vw, 2.8rem)', animation: 'slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both' }}
+                  className="font-display font-black text-reon-cream leading-[0.92] mb-6"
+                  style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', animation: 'slideUp 0.5s 0.15s both' }}
                 >
                   {active.title}
                 </h2>
 
                 {/* Divider */}
-                <div className="w-12 h-[3px] bg-reon-red mb-6" style={{ animation: 'lineGrow 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both' }} />
+                <div className="w-12 h-[3px] bg-reon-red mb-6" style={{ animation: 'slideUp 0.5s 0.2s both' }} />
 
                 {/* Description */}
                 <p
-                  className="text-reon-gray text-sm lg:text-base leading-relaxed mb-8"
-                  style={{ animation: 'slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both' }}
+                  className="text-reon-gray text-sm leading-loose mb-10"
+                  style={{ animation: 'slideUp 0.5s 0.25s both' }}
                 >
                   {active.desc}
                 </p>
 
                 {/* Stats row */}
                 <div
-                  className="grid grid-cols-2 gap-4 mb-8"
-                  style={{ animation: 'slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both' }}
+                  className="grid grid-cols-2 gap-4 mb-10"
+                  style={{ animation: 'slideUp 0.5s 0.3s both' }}
                 >
                   {[['Status', 'Active Mandate'], ['Type', active.tag.split('·')[0].trim()]].map(([label, val]) => (
-                    <div key={label} className="border border-white/8 rounded-xl p-4 bg-white/[0.01] hover:bg-white/[0.03] hover:border-white/15 transition-all duration-300">
+                    <div key={label} className="border border-white/8 rounded-xl p-4">
                       <p className="text-reon-gray text-xs uppercase tracking-widest mb-1">{label}</p>
                       <p className="text-reon-cream text-sm font-semibold">{val}</p>
                     </div>
@@ -285,7 +276,7 @@ export default function GallerySection() {
               </div>
 
               {/* Bottom controls */}
-              <div style={{ animation: 'slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.42s both' }}>
+              <div style={{ animation: 'slideUp 0.5s 0.35s both' }}>
                 {/* Prev / Next */}
                 <div className="flex items-center gap-3 mb-6">
                   <button
@@ -326,38 +317,24 @@ export default function GallerySection() {
 
       {/* Animation keyframes */}
       <style>{`
-        @keyframes backdropIn  { 
-          from { opacity: 0; backdrop-filter: blur(0px); } 
-          to { opacity: 1; backdrop-filter: blur(20px); } 
-        }
-        @keyframes backdropOut { 
-          from { opacity: 1; backdrop-filter: blur(20px); } 
-          to { opacity: 0; backdrop-filter: blur(0px); } 
-        }
+        @keyframes backdropIn  { from { opacity:0 } to { opacity:1 } }
+        @keyframes backdropOut { from { opacity:1 } to { opacity:0 } }
 
         @keyframes popupIn {
-          from { opacity: 0; transform: scale(0.95) translateY(40px); }
-          to   { opacity: 1; transform: scale(1)    translateY(0);    }
+          from { opacity:0; transform: scale(0.88) translateY(60px); }
+          to   { opacity:1; transform: scale(1)    translateY(0);    }
         }
         @keyframes popupOut {
-          from { opacity: 1; transform: scale(1)    translateY(0);    }
-          to   { opacity: 0; transform: scale(0.96) translateY(30px); }
+          from { opacity:1; transform: scale(1)    translateY(0);    }
+          to   { opacity:0; transform: scale(0.92) translateY(40px); }
         }
         @keyframes imageReveal {
-          from { opacity: 0; transform: scale(1.15); clip-path: inset(0 100% 0 0); }
-          to   { opacity: 1; transform: scale(1);    clip-path: inset(0 0 0 0);    }
+          from { opacity:0; transform: scale(1.08); }
+          to   { opacity:1; transform: scale(1);    }
         }
         @keyframes slideUp {
-          from { opacity: 0; transform: translateY(30px); }
-          to   { opacity: 1; transform: translateY(0);    }
-        }
-        @keyframes lineGrow {
-          from { width: 0; }
-          to   { width: 48px; }
-        }
-        @keyframes badgePop {
-          from { opacity: 0; transform: scale(0.85) translateY(10px); }
-          to   { opacity: 1; transform: scale(1)    translateY(0);    }
+          from { opacity:0; transform: translateY(24px); }
+          to   { opacity:1; transform: translateY(0);    }
         }
       `}</style>
     </>
