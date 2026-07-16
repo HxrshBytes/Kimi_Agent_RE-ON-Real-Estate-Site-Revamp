@@ -12,11 +12,18 @@ const properties = [
   },
   {
     id: 2,
-    title: 'The Garden Villa',
-    location: 'Hyderabad',
-    image: '/gallery_villa.jpg',
-    desc: 'An expansive private villa nestled within manicured gardens, featuring resort-style amenities and sunset vistas.',
-    tag: 'Villa · 5 BHK',
+    title: ' Square Ornate ',
+    location: 'Navi Mumbai',
+    image: '/gallery_ornate_facade.jpg',
+    images: [
+      '/gallery_ornate_facade.jpg',
+      '/gallery_ornate.jpg',
+      '/gallery_ornate_2bhk.jpg',
+      '/gallery_ornate_1bhk.jpg',
+      '/gallery_ornate_floorplan.png',
+    ],
+    desc: 'An ultimate rooftop penthouse at Square Ornate featuring a private terrace garden, direct lift access, play areas, and stunning urban views.',
+    tag: 'Apartment · 1 & 2 BHK',
   },
   {
     id: 3,
@@ -33,6 +40,11 @@ export default function GallerySection() {
   const [isInView, setIsInView] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [closing, setClosing] = useState(false);
+  const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
+
+  useEffect(() => {
+    setActiveImageIndex(0);
+  }, [activeIndex]);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -72,6 +84,8 @@ export default function GallerySection() {
   };
 
   const active = activeIndex !== null ? properties[activeIndex] : null;
+  const currentImages = active?.images || (active ? [active.image] : []);
+  const imageToDisplay = active ? currentImages[activeImageIndex] || active.image : '';
 
   return (
     <>
@@ -81,9 +95,8 @@ export default function GallerySection() {
       >
         {/* Left Heading Block */}
         <div
-          className={`lg:absolute lg:left-[7vw] lg:top-[18vh] px-4 lg:px-0 mb-10 lg:mb-0 lg:w-[24vw] transition-all duration-1000 ${
-            isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-[12vw]'
-          }`}
+          className={`lg:absolute lg:left-[7vw] lg:top-[18vh] px-4 lg:px-0 mb-10 lg:mb-0 lg:w-[24vw] transition-all duration-1000 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-[12vw]'
+            }`}
         >
           <h2 className="headline-lg text-reon-cream text-[clamp(2rem,6vw,3.5rem)] mb-4">THREE HOMES</h2>
           <p className="text-reon-gray text-base leading-relaxed mb-6">A snapshot of our current mandate portfolio.</p>
@@ -96,7 +109,7 @@ export default function GallerySection() {
             const delays = ['delay-100', 'delay-200', 'delay-300'];
             const entrances = [
               isInView ? 'opacity-100 translate-x-0 translate-y-0 rotate-0' : 'opacity-0 translate-x-[60vw] translate-y-[18vh] rotate-3',
-              isInView ? 'opacity-100 translate-y-0 scale-100'              : 'opacity-0 translate-y-[100vh] scale-95',
+              isInView ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-[100vh] scale-95',
               isInView ? 'opacity-100 translate-x-0 translate-y-0 rotate-0' : 'opacity-0 translate-x-[60vw] translate-y-[18vh] -rotate-3',
             ];
             return (
@@ -157,12 +170,42 @@ export default function GallerySection() {
             {/* ── LEFT: BIG IMAGE ── */}
             <div className="relative lg:w-[62%] h-[50vh] lg:h-[88vh] overflow-hidden flex-shrink-0">
               <img
-                key={active.image}
-                src={active.image}
+                key={imageToDisplay}
+                src={imageToDisplay}
                 alt={active.title}
                 className="w-full h-full object-cover"
                 style={{ animation: 'imageReveal 0.6s cubic-bezier(0.22,1,0.36,1) both' }}
               />
+
+              {/* Internal Image Navigation Arrows */}
+              {currentImages.length > 1 && (
+                <>
+                  <button
+                    onClick={() => setActiveImageIndex((prev) => (prev - 1 + currentImages.length) % currentImages.length)}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 border border-white/10 flex items-center justify-center text-white/80 hover:bg-reon-red hover:border-reon-red hover:text-white transition-all duration-300 z-10 group/imgprev"
+                  >
+                    <ChevronLeft className="w-5 h-5 group-hover/imgprev:-translate-x-0.5 transition-transform" />
+                  </button>
+                  <button
+                    onClick={() => setActiveImageIndex((prev) => (prev + 1) % currentImages.length)}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 border border-white/10 flex items-center justify-center text-white/80 hover:bg-reon-red hover:border-reon-red hover:text-white transition-all duration-300 z-10 group/imgnext"
+                  >
+                    <ChevronRight className="w-5 h-5 group-hover/imgnext:translate-x-0.5 transition-transform" />
+                  </button>
+
+                  {/* Dot Indicators for Images */}
+                  <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-2 z-10 bg-black/45 px-3 py-1.5 rounded-full backdrop-blur-sm">
+                    {currentImages.map((_, imgIndex) => (
+                      <button
+                        key={imgIndex}
+                        onClick={() => setActiveImageIndex(imgIndex)}
+                        className={`rounded-full transition-all duration-300 ${imgIndex === activeImageIndex ? 'w-5 h-2 bg-reon-red' : 'w-2 h-2 bg-white/40 hover:bg-white/70'
+                          }`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
               {/* Gradient */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-reon-greenDark/30 pointer-events-none" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
@@ -256,9 +299,8 @@ export default function GallerySection() {
                       <button
                         key={i}
                         onClick={() => setActiveIndex(i)}
-                        className={`rounded-full transition-all duration-300 ${
-                          i === activeIndex ? 'w-6 h-2 bg-reon-red' : 'w-2 h-2 bg-white/20 hover:bg-white/40'
-                        }`}
+                        className={`rounded-full transition-all duration-300 ${i === activeIndex ? 'w-6 h-2 bg-reon-red' : 'w-2 h-2 bg-white/20 hover:bg-white/40'
+                          }`}
                       />
                     ))}
                   </div>
