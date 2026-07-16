@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import HeroSection from './sections/HeroSection';
 import FeaturedSection from './sections/FeaturedSection';
@@ -9,8 +10,46 @@ import InsightSection from './sections/InsightSection';
 import ClosingSection from './sections/ClosingSection';
 import ContactSection from './sections/ContactSection';
 import Footer from './sections/Footer';
+import CareerPage from './sections/CareerPage';
+import AboutUsPage from './sections/AboutUsPage';
 
 import './index.css';
+
+function Home() {
+  return (
+    <>
+      {/* Section 1: Hero */}
+      <HeroSection />
+      
+      {/* Section 2: Featured Property */}
+      <FeaturedSection />
+      
+      {/* Section 3: Gallery */}
+      <GallerySection />
+      
+      {/* Section 4: Mandate Model */}
+      <MandateSection />
+      
+      {/* Section 5: Partnership */}
+      <PartnershipSection />
+      
+      {/* Section 6: Philosophy */}
+      <PhilosophySection />
+      
+      {/* Section 7: Insight */}
+      <InsightSection />
+      
+      {/* Section 8: Closing */}
+      <ClosingSection />
+      
+      {/* Section 9: Contact */}
+      <ContactSection />
+      
+      {/* Section 10: Footer */}
+      <Footer />
+    </>
+  );
+}
 
 function App() {
   return (
@@ -23,35 +62,11 @@ function App() {
 
       {/* Main Content */}
       <main className="relative">
-        {/* Section 1: Hero */}
-        <HeroSection />
-        
-        {/* Section 2: Featured Property */}
-        <FeaturedSection />
-        
-        {/* Section 3: Gallery */}
-        <GallerySection />
-        
-        {/* Section 4: Mandate Model */}
-        <MandateSection />
-        
-        {/* Section 5: Partnership */}
-        <PartnershipSection />
-        
-        {/* Section 6: Philosophy */}
-        <PhilosophySection />
-        
-        {/* Section 7: Insight */}
-        <InsightSection />
-        
-        {/* Section 8: Closing */}
-        <ClosingSection />
-        
-        {/* Section 9: Contact */}
-        <ContactSection />
-        
-        {/* Section 10: Footer */}
-        <Footer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/career" element={<CareerPage />} />
+        </Routes>
       </main>
     </div>
   );

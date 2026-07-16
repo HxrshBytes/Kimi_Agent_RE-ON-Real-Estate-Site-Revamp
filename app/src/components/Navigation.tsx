@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const navLinks = ['Work', 'Services', 'Insights', 'Contact'];
+const navLinks = ['Work', 'Services', 'About', 'Career', 'Contact'];
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +29,7 @@ export default function Navigation() {
       >
         <div className="max-w-7xl mx-auto px-8 flex justify-between items-center">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <img
               src="/mainlogo.svg"
               alt="RE-ON Real Estate"
@@ -39,18 +40,18 @@ export default function Navigation() {
               <span className="font-display font-bold text-reon-red text-3xl tracking-tight">RE</span>
               <span className="font-display font-bold text-reon-cream text-3xl tracking-tight">-ON</span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a 
+              <Link 
                 key={link}
-                href="#" 
+                to={link === 'Career' ? '/career' : link === 'About' ? '/about' : '/'} 
                 className="text-reon-gray hover:text-reon-cream transition-colors text-sm uppercase tracking-wider"
               >
                 {link}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -84,14 +85,14 @@ export default function Navigation() {
           {/* Mobile Links */}
           <div className="flex flex-col items-center justify-center flex-1 gap-8">
             {navLinks.map((link) => (
-              <a 
+              <Link 
                 key={link}
-                href="#" 
+                to={link === 'Career' ? '/career' : link === 'About' ? '/about' : '/'} 
                 className="text-reon-cream text-2xl font-display font-bold uppercase tracking-wider"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link}
-              </a>
+              </Link>
             ))}
           </div>
 
