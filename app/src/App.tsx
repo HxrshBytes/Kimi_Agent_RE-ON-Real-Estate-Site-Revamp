@@ -9,9 +9,11 @@ import PhilosophySection from './sections/PhilosophySection';
 import InsightSection from './sections/InsightSection';
 import ClosingSection from './sections/ClosingSection';
 import ContactSection from './sections/ContactSection';
+import MapSection from './sections/MapSection';
 import Footer from './sections/Footer';
 import CareerPage from './sections/CareerPage';
 import AboutUsPage from './sections/AboutUsPage';
+import ContactUsPage from './sections/ContactUsPage';
 
 import './index.css';
 
@@ -45,7 +47,10 @@ function Home() {
       {/* Section 9: Contact */}
       <ContactSection />
       
-      {/* Section 10: Footer */}
+      {/* Section 10: Map */}
+      <MapSection />
+      
+      {/* Section 11: Footer */}
       <Footer />
     </>
   );
@@ -66,6 +71,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/career" element={<CareerPage />} />
+          <Route path="/contact" element={<ContactUsPage />} />
         </Routes>
       </main>
     </div>

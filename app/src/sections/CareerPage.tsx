@@ -258,7 +258,6 @@ function JobCard({ job, index, onApply }: { job: typeof openings[0]; index: numb
 /* ─── MAIN PAGE ─────────────────────────────────────────────── */
 export default function CareerPage() {
   const [applyJob, setApplyJob] = useState<typeof openings[0] | null>(null);
-  const heroRef = useRef<HTMLDivElement>(null);
   const [heroVisible, setHeroVisible] = useState(false);
 
   useEffect(() => {
@@ -341,7 +340,7 @@ export default function CareerPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {values.map((v, i) => (
+            {values.map((v) => (
               <div
                 key={v.title}
                 className="border border-white/8 rounded-2xl p-7 hover:border-white/20 hover:bg-white/[0.03] transition-all duration-300 group"

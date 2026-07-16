@@ -47,7 +47,7 @@ export default function Navigation() {
             {navLinks.map((link) => (
               <Link 
                 key={link}
-                to={link === 'Career' ? '/career' : link === 'About' ? '/about' : '/'} 
+                to={link === 'Career' ? '/career' : link === 'About' ? '/about' : link === 'Contact' ? '/contact' : '/'}
                 className="text-reon-gray hover:text-reon-cream transition-colors text-sm uppercase tracking-wider"
               >
                 {link}
@@ -87,7 +87,7 @@ export default function Navigation() {
             {navLinks.map((link) => (
               <Link 
                 key={link}
-                to={link === 'Career' ? '/career' : link === 'About' ? '/about' : '/'} 
+                to={link === 'Career' ? '/career' : link === 'About' ? '/about' : link === 'Contact' ? '/contact' : '/'}
                 className="text-reon-cream text-2xl font-display font-bold uppercase tracking-wider"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "/home/harsh/.nvm/versions/node/v22.23.1/bin/node node_modules/.bin/vite",
-    "build": "/home/harsh/.nvm/versions/node/v22.23.1/bin/node node_modules/.bin/tsc -b && /home/harsh/.nvm/versions/node/v22.23.1/bin/node node_modules/.bin/vite build",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "/home/harsh/.nvm/versions/node/v22.23.1/bin/node node_modules/.bin/vite preview"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

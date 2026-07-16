@@ -112,10 +112,15 @@ export default function ContactSection() {
                   <div className="w-9 lg:w-10 h-9 lg:h-10 rounded-full bg-reon-green flex items-center justify-center flex-shrink-0 mt-1">
                     <MapPin className="w-4 lg:w-5 h-4 lg:h-5 text-reon-red" />
                   </div>
-                  <span className="text-reon-cream text-sm lg:text-base leading-relaxed">
+                  <a 
+                    href="https://www.google.co.in/maps/place/SM+Heights/@19.0809489,73.0966298,20.26z/data=!4m14!1m7!3m6!1s0x3be7eb007111c757:0xef5565170b0c2da2!2sTHE+NEST!8m2!3d19.0760238!4d73.0917544!16s%2Fg%2F11nbh3nltw!3m5!1s0x3be7ea0d1fff9eed:0xe9b3604843d02e56!8m2!3d19.0811616!4d73.0965223!16s%2Fg%2F11dzqr38p6?entry=ttu&g_ep=EgoyMDI2MDcxMy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-reon-cream text-sm lg:text-base leading-relaxed hover:text-reon-red hover:underline transition-colors"
+                  >
                     Shop No 1, SM Heights, Plot No. 34, Sector 5,<br />
                     Taloja Phase 1, Navi Mumbai, MH 410208, IN
-                  </span>
+                  </a>
                 </div>
               </div>
             </div>
