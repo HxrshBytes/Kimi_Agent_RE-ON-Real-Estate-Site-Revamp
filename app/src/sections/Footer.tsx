@@ -72,7 +72,7 @@ export default function Footer() {
         <div className="border-t border-reon-cream/10 pt-6 lg:pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-reon-gray text-xs lg:text-sm">
-              © 2026 RE-ON Real Estate LLP. All rights reserved.
+              © 2026 RE-ON Real Estate LLP. All rights reserved. | GSTIN: 27ABNFR3080RTZB
             </p>
             <p className="text-reon-gray text-xs lg:text-sm">
               www.reonrealestatellp.com

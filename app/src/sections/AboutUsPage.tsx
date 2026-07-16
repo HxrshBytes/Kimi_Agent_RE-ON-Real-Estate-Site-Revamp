@@ -148,6 +148,13 @@ export default function AboutUsPage() {
         </div>
       </section>
 
+      {/* ── COMPANY INFO ── */}
+      <section className="px-8 lg:px-24 py-8 bg-reon-green text-center">
+        <p className="text-reon-gray text-xs tracking-widest uppercase">
+          Registered Entity: RE-ON Real Estate LLP | GSTIN: 27ABNFR3080RTZB
+        </p>
+      </section>
+
       {/* ── FOOTER ── */}
       <Footer />
     </div>
