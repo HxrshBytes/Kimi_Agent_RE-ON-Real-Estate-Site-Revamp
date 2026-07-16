@@ -399,12 +399,8 @@ export default function CareerPage() {
 
       {/* ── FOOTER ── */}
       <footer className="px-8 lg:px-24 py-10 border-t border-white/8 flex flex-col lg:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center">
           <img src="/mainlogo.svg" alt="RE-ON" className="h-8 w-auto" style={{ filter: 'brightness(0) invert(1)' }} />
-          <div className="flex items-center">
-            <span className="font-display font-bold text-reon-red text-xl">RE</span>
-            <span className="font-display font-bold text-reon-cream text-xl">-ON</span>
-          </div>
         </div>
         <p className="text-reon-gray text-xs">© {new Date().getFullYear()} RE-ON Real Estate LLP. All rights reserved.</p>
       </footer>

@@ -29,17 +29,13 @@ export default function Navigation() {
       >
         <div className="max-w-7xl mx-auto px-8 flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center">
             <img
               src="/mainlogo.svg"
               alt="RE-ON Real Estate"
-              className="h-14 w-auto transition-all duration-300"
+              className="h-10 md:h-12 w-auto transition-all duration-300"
               style={{ filter: 'brightness(0) invert(1)' }}
             />
-            <div className="flex items-center leading-none">
-              <span className="font-display font-bold text-reon-red text-3xl tracking-tight">RE</span>
-              <span className="font-display font-bold text-reon-cream text-3xl tracking-tight">-ON</span>
-            </div>
           </Link>
 
           {/* Desktop Links */}
