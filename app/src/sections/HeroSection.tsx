@@ -66,7 +66,7 @@ export default function HeroSection() {
             isVisible ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <img src="/logo.png" alt="RE-ON Real Estate" className="h-24 lg:h-36 w-auto object-contain" />
+          <img src="/mainlogo.svg" alt="RE-ON Real Estate" className="h-8 lg:h-10 w-auto object-contain" />
           <p className="text-reon-gray text-xs lg:text-sm uppercase tracking-[0.2em] mt-1">
             Real Estate Always On
           </p>

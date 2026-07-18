@@ -31,9 +31,9 @@ export default function Navigation() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="/logo.png"
+              src="/mainlogo.svg"
               alt="RE-ON Real Estate"
-              className="h-36 lg:h-48 w-auto transition-all duration-300 object-contain"
+              className="h-10 lg:h-12 w-auto transition-all duration-300 object-contain"
             />
           </Link>
 
