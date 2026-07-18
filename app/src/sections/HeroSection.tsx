@@ -1,15 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 
-// RE-ON Logo Component
-function ReonLogo({ className = "" }: { className?: string }) {
-  return (
-    <div className={`flex items-center ${className}`}>
-      <span className="font-display font-bold text-reon-red tracking-tight">RE</span>
-      <span className="font-display font-bold text-reon-cream tracking-tight">-ON</span>
-    </div>
-  );
-}
-
 export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -76,7 +66,7 @@ export default function HeroSection() {
             isVisible ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <ReonLogo className="text-3xl lg:text-4xl" />
+          <img src="/logo.png" alt="RE-ON Real Estate" className="h-24 lg:h-36 w-auto object-contain" />
           <p className="text-reon-gray text-xs lg:text-sm uppercase tracking-[0.2em] mt-1">
             Real Estate Always On
           </p>

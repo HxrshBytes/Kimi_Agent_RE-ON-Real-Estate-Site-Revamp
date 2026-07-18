@@ -85,7 +85,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-reon-cream text-sm lg:text-base font-medium">Sanchit P. Revandkar</p>
-                    <p className="text-reon-gray text-xs lg:text-sm">+91 9619 1399 70</p>
+                    <p className="text-reon-gray text-xs lg:text-sm">+91 85919-44450</p>
                   </div>
                 </div>
                 
@@ -95,7 +95,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-reon-cream text-sm lg:text-base font-medium">Yassar K. Rawthar</p>
-                    <p className="text-reon-gray text-xs lg:text-sm">+91 9930 7777 60</p>
+                    <p className="text-reon-gray text-xs lg:text-sm">+91 85919-44450</p>
                   </div>
                 </div>
               </div>
@@ -176,7 +176,7 @@ export default function ContactSection() {
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 85919-44450"
                   className="w-full"
                 />
               </div>
