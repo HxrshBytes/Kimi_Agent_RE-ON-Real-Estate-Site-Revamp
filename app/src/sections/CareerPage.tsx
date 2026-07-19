@@ -152,7 +152,7 @@ function ApplyModal({ job, onClose }: { job: typeof openings[0]; onClose: () => 
               </div>
               <div>
                 <label className="block text-reon-gray text-xs uppercase tracking-widest mb-2">Phone</label>
-                <input placeholder="+91 85919-44450" className="w-full" />
+                <input placeholder="+91 85919-44460" className="w-full" />
               </div>
               <div>
                 <label className="block text-reon-gray text-xs uppercase tracking-widest mb-2">LinkedIn / Portfolio URL</label>

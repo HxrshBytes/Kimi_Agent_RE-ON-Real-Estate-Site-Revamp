@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ChevronDown, ArrowRight, Home, Building2, Key, Handshake } from 'lucide-react';
+import GallerySection from './GallerySection';
 import Footer from './Footer';
 
 const servicesList = [
@@ -116,6 +117,11 @@ export default function ServicesPage() {
             </div>
         </div>
       </section>
+
+      {/* ── GALLERY ── */}
+      <div className="border-b border-white/8">
+        <GallerySection />
+      </div>
 
       {/* ── FOOTER ── */}
       <Footer />

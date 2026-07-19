@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function PhilosophySection() {
   const sectionRef = useRef<HTMLElement>(null);
   const [isInView, setIsInView] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -55,7 +57,7 @@ export default function PhilosophySection() {
         <p className="text-reon-gray text-sm lg:text-base leading-relaxed mb-6 lg:mb-8 max-w-full lg:max-w-[32vw]">
           We document materials, light, and proportion—then translate them into a sales narrative that feels like architecture journalism.
         </p>
-        <button className="btn-accent w-fit">
+        <button className="btn-accent w-fit" onClick={() => navigate('/services')}>
           See our process
         </button>
       </div>

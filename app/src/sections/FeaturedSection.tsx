@@ -36,8 +36,8 @@ export default function FeaturedSection() {
         }`}
       >
         <img 
-          src="/featured_courtyard.jpg" 
-          alt="Courtyard house"
+          src="/gallery_navya_greens.jpg" 
+          alt="Navya Greens"
           className="w-full h-full object-cover"
         />
         <div className="image-overlay" />
@@ -52,8 +52,8 @@ export default function FeaturedSection() {
         {/* Card Image */}
         <div className="w-full h-[40vh] lg:h-[52%] overflow-hidden">
           <img 
-            src="/featured_courtyard.jpg" 
-            alt="The Courtyard House"
+            src="/gallery_navya_greens.jpg" 
+            alt="Navya Greens"
             className={`w-full h-full object-cover transition-all duration-1000 delay-300 ${
               isInView ? 'scale-100 translate-y-0' : 'scale-105 translate-y-[6%]'
             }`}
@@ -63,13 +63,13 @@ export default function FeaturedSection() {
         {/* Card Content */}
         <div className="p-5 lg:p-6 flex flex-col">
           <h3 className="font-display font-bold text-reon-cream text-lg lg:text-xl mb-1">
-            The Courtyard House
+            Navya Greens
           </h3>
           <p className="text-reon-gray text-xs lg:text-sm mb-3 lg:mb-4">
-            Bengaluru · Architecture by Hundred Hands
+            Navi Mumbai · Premium Residential Plots
           </p>
           <p className="font-display font-bold text-reon-red text-xl lg:text-2xl mb-4 lg:mb-auto">
-            ₹12.4 Cr
+            On Request
           </p>
           <button className="btn-accent text-sm py-2 lg:py-3 px-4 lg:px-5 w-fit mt-4 lg:mt-0">
             Request details

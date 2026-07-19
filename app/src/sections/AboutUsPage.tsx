@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ChevronDown, ArrowRight, User } from 'lucide-react';
+import { ChevronDown, ArrowRight } from 'lucide-react';
 import Footer from './Footer';
 
 const leadership = [
@@ -7,13 +7,15 @@ const leadership = [
     name: 'Sanchit Revandkar',
     role: 'Founder & Visionary',
     bio: 'With over 13 years of distinguished experience in the premium real estate market, Sanchit brings unparalleled expertise and strategic vision. He pioneers the mandate-only model in India, elevating property curation through a design-first philosophy and ensuring every RE-ON home is experienced as an exclusive masterpiece of luxury living.',
-    image: '/gallery_apartment.jpg'
+    image: '/sanchit_new.jpeg',
+    flip: false
   },
   {
     name: 'Yassar K. Rawthar',
     role: 'Head of Strategic Sales & Marketing',
     bio: 'Leveraging 16 years of specialized experience in strategic sales and marketing within the real estate sector, Yassar drives RE-ON\'s growth and market presence. His innovative strategies and deep understanding of buyer dynamics ensure that every curated property flawlessly connects with its ideal audience.',
-    image: '/gallery_studio.jpg'
+    image: '/yassar_new.jpeg',
+    flip: false
   }
 ];
 
@@ -134,8 +136,10 @@ export default function AboutUsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
                 {leadership.map((leader) => (
                     <div key={leader.name} className="group cursor-pointer">
-                        <div className="w-full h-[500px] rounded-3xl overflow-hidden mb-8 relative border border-white/10 bg-reon-green flex items-center justify-center group-hover:bg-reon-red/10 transition-colors duration-700">
-                            <User className="w-48 h-48 text-reon-cream/20 group-hover:text-reon-red transition-all duration-700 group-hover:scale-110" strokeWidth={1} />
+                        <div className="w-full h-[500px] rounded-3xl overflow-hidden mb-8 relative border border-white/10 bg-reon-green flex items-end justify-center group-hover:bg-reon-red/10 transition-colors duration-700">
+                            <div className="w-full h-full pt-12 px-8 group-hover:scale-105 transition-transform duration-700 ease-out">
+                                <img src={leader.image} alt={leader.name} className={`w-full h-full object-contain object-bottom ${leader.flip ? '-scale-x-100' : ''}`} />
+                            </div>
                         </div>
                         <h3 className="font-display font-black text-3xl text-reon-cream mb-2 group-hover:text-white transition-colors">{leader.name}</h3>
                         <p className="text-reon-red text-xs uppercase tracking-widest font-semibold mb-6">{leader.role}</p>

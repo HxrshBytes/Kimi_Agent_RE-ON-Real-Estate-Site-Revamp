@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Mail, MapPin, User } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 
 // RE-ON Logo Component
 function ReonLogo({ className = "" }: { className?: string }) {
@@ -106,28 +106,16 @@ export default function ContactSection() {
             
             {/* Contact Details */}
             <div className="space-y-4 lg:space-y-5 pt-4">
-              {/* Partners */}
+              {/* Phone */}
               <div className="space-y-3">
-                <p className="text-reon-gray text-xs uppercase tracking-wider mb-2">Our Partners</p>
-                
+                <p className="text-reon-gray text-xs uppercase tracking-wider mb-2">Contact</p>
                 <div className="flex items-center gap-3 lg:gap-4">
                   <div className="w-9 lg:w-10 h-9 lg:h-10 rounded-full bg-reon-green flex items-center justify-center">
-                    <User className="w-4 lg:w-5 h-4 lg:h-5 text-reon-red" />
+                    <Phone className="w-4 lg:w-5 h-4 lg:h-5 text-reon-red" />
                   </div>
-                  <div>
-                    <p className="text-reon-cream text-sm lg:text-base font-medium">Sanchit P. Revandkar</p>
-                    <p className="text-reon-gray text-xs lg:text-sm">+91 85919-44450</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3 lg:gap-4">
-                  <div className="w-9 lg:w-10 h-9 lg:h-10 rounded-full bg-reon-green flex items-center justify-center">
-                    <User className="w-4 lg:w-5 h-4 lg:h-5 text-reon-red" />
-                  </div>
-                  <div>
-                    <p className="text-reon-cream text-sm lg:text-base font-medium">Yassar K. Rawthar</p>
-                    <p className="text-reon-gray text-xs lg:text-sm">+91 85919-44450</p>
-                  </div>
+                  <a href="tel:+918591944460" className="text-reon-cream text-sm lg:text-base font-medium hover:text-reon-red transition-colors">
+                    +91 85919-44460
+                  </a>
                 </div>
               </div>
 
@@ -207,7 +195,7 @@ export default function ContactSection() {
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                  placeholder="+91 85919-44450"
+                  placeholder="+91 85919-44460"
                   className="w-full"
                 />
               </div>

@@ -34,7 +34,7 @@ export default function MapSection() {
         <iframe 
           width="100%" 
           height="100%" 
-          style={{ border: 0, filter: 'grayscale(100%) invert(90%) contrast(1.2)' }} 
+          style={{ border: 0 }} 
           loading="lazy" 
           allowFullScreen 
           src="https://maps.google.com/maps?q=SM+Heights,+Sector+5,+Taloja+Phase+1,+Navi+Mumbai&t=&z=16&ie=UTF8&iwloc=&output=embed"
