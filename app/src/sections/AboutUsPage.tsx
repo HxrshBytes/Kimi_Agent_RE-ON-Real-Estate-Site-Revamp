@@ -97,7 +97,10 @@ export default function AboutUsPage() {
                     </p>
                 </div>
                 
-                <button className="btn-accent mt-4 flex items-center gap-3 px-8 py-4">
+                <button 
+                  onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+                  className="btn-accent mt-4 flex items-center gap-3 px-8 py-4"
+                >
                     Explore Our Services <ArrowRight className="w-5 h-5" />
                 </button>
             </div>

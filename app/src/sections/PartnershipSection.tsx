@@ -68,7 +68,10 @@ export default function PartnershipSection() {
         <p className="text-reon-gray text-sm lg:text-base leading-relaxed mb-6 lg:mb-8 max-w-full lg:max-w-[32vw]">
           From pricing strategy to channel partner enablement, we operate as a seamless layer between product and market.
         </p>
-        <button className="btn-accent w-fit">
+        <button 
+          onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+          className="btn-accent w-fit"
+        >
           Request a proposal
         </button>
       </div>

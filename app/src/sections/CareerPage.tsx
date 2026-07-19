@@ -243,7 +243,7 @@ function JobCard({ job, index, onApply }: { job: typeof openings[0]; index: numb
             </ul>
           </div>
           <button
-            onClick={onApply}
+            onClick={() => window.open('https://wa.me/918591944460', '_blank')}
             className="btn-accent flex items-center gap-2 px-8 py-3.5"
           >
             Apply for This Role
@@ -307,18 +307,6 @@ export default function CareerPage() {
             </p>
           </div>
 
-          {/* Stat row */}
-          <div
-            className="flex flex-wrap gap-12 mt-14 transition-all duration-1000 delay-300"
-            style={{ opacity: heroVisible ? 1 : 0, transform: heroVisible ? 'translateY(0)' : 'translateY(30px)' }}
-          >
-            {[['₹30Cr+', 'Mandates Managed'], ['3', 'Cities Active'], ['12', 'Team Members'], ['100%', 'Mandate-Only Model']].map(([num, label]) => (
-              <div key={label}>
-                <p className="font-display font-black text-reon-cream text-3xl mb-1">{num}</p>
-                <p className="text-reon-gray text-xs uppercase tracking-widest">{label}</p>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Scroll indicator */}
@@ -388,7 +376,7 @@ export default function CareerPage() {
             </p>
           </div>
           <button
-            onClick={() => setApplyJob({ id: 0, role: 'Open Application', dept: 'General', location: 'Any City', type: 'Full-Time', desc: '', requirements: [] })}
+            onClick={() => window.open('https://wa.me/918591944460', '_blank')}
             className="btn-accent flex items-center gap-2 px-10 py-5 whitespace-nowrap text-base"
           >
             Get In Touch

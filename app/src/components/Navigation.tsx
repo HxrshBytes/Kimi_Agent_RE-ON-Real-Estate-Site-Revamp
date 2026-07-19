@@ -27,7 +27,7 @@ export default function Navigation() {
             : 'bg-transparent py-6'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-8 flex justify-between items-center">
+        <div className="w-full px-8 lg:px-24 flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
@@ -92,7 +92,10 @@ export default function Navigation() {
           </div>
 
           {/* CTA */}
-          <button className="btn-accent w-full">
+          <button 
+            onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+            className="btn-accent w-full"
+          >
             Start a project
           </button>
         </div>

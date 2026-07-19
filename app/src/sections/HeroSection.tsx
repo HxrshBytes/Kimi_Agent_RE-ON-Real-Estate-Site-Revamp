@@ -147,8 +147,8 @@ export default function HeroSection() {
           A boutique real estate studio representing select developers across India.
         </p>
 
-        {/* CTA Button */}
         <button
+          onClick={() => window.location.href = '/services'}
           className={`btn-accent w-fit transition-all duration-700 delay-800 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}

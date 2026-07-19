@@ -105,8 +105,18 @@ export default function GallerySection() {
         ref={sectionRef}
         className="relative w-full min-h-screen bg-reon-greenDark py-16 lg:py-0 overflow-hidden"
       >
+        {/* Left Heading Block */}
+        <div
+          className={`lg:absolute lg:left-[7vw] lg:top-[18vh] px-4 lg:px-0 mb-10 lg:mb-0 lg:w-[24vw] transition-all duration-1000 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-[12vw]'
+            }`}
+        >
+          <h2 className="headline-lg text-reon-cream text-[clamp(2rem,6vw,3.5rem)] mb-4">OUR <span className="text-reon-red italic">PORTFOLIO</span></h2>
+          <p className="text-reon-gray text-base leading-relaxed mb-6">A curated selection of mandate properties — each chosen for design excellence, location, and sellability.</p>
+          <p className="text-reon-gray text-xs uppercase tracking-[0.2em] opacity-60">Click any card to explore →</p>
+        </div>
+
         {/* Property Cards */}
-        <div className="lg:absolute lg:left-[16.5vw] lg:top-[10vh] flex flex-col lg:flex-row gap-6 lg:gap-[2vw] px-4 lg:px-0">
+        <div className="lg:absolute lg:left-[28vw] lg:top-[10vh] flex flex-col lg:flex-row gap-6 lg:gap-[2vw] px-4 lg:px-0">
           {properties.map((prop, i) => {
             const delays = ['delay-100', 'delay-200', 'delay-300'];
             const entrances = [
@@ -308,10 +318,7 @@ export default function GallerySection() {
                   </div>
                 </div>
 
-                <button 
-                  onClick={() => window.open('https://wa.me/918591944460', '_blank')}
-                  className="btn-accent w-full text-center py-4 text-sm tracking-wider"
-                >
+                <button className="btn-accent w-full text-center py-4 text-sm tracking-wider">
                   Enquire About This Property
                 </button>
               </div>

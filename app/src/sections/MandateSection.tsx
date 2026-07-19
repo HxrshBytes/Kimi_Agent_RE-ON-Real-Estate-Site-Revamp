@@ -55,7 +55,10 @@ export default function MandateSection() {
         <p className="text-reon-gray text-sm lg:text-base leading-relaxed mb-6 lg:mb-8 max-w-full lg:max-w-[32vw]">
           We take limited mandates. We invest in storytelling, staging, and sales strategy—so developments move faster without discounting.
         </p>
-        <button className="btn-accent w-fit">
+        <button 
+          onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+          className="btn-accent w-fit"
+        >
           Partner with us
         </button>
       </div>

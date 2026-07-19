@@ -76,7 +76,10 @@ export default function FeaturedSection() {
           <p className="font-display font-bold text-reon-red text-xl lg:text-2xl mb-4 lg:mb-auto">
             On Request
           </p>
-          <button className="btn-accent text-sm py-2 lg:py-3 px-4 lg:px-5 w-fit mt-4 lg:mt-0">
+          <button 
+            onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+            className="btn-accent text-sm py-2 lg:py-3 px-4 lg:px-5 w-fit mt-4 lg:mt-0"
+          >
             Request details
           </button>
         </div>
