@@ -85,21 +85,6 @@ export default function FeaturedSection() {
         </div>
       </div>
 
-      {/* Right Side Content */}
-      <h2 
-        className={`absolute left-4 lg:left-[55vw] right-4 lg:right-auto top-auto lg:top-[55vh] bottom-[15vh] lg:bottom-auto headline-lg text-reon-cream text-[clamp(1.5rem,5vw,3rem)] transition-all duration-1000 delay-400 ${
-          isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[18vw]'
-        }`}
-      >
-        SELECTED WORK
-      </h2>
-      <p 
-        className={`hidden lg:block absolute left-[55vw] top-[65vh] w-[35vw] text-reon-gray text-base leading-relaxed transition-all duration-1000 delay-500 ${
-          isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[18vw]'
-        }`}
-      >
-        We represent a small roster of homes—each chosen for craft, context, and sellability.
-      </p>
     </section>
   );
 }
