@@ -175,7 +175,7 @@ function ApplyModal({ job, onClose }: { job: typeof openings[0]; onClose: () => 
 }
 
 /* ─── JOB CARD ─────────────────────────────────────────────── */
-function JobCard({ job, index }: { job: typeof openings[0]; index: number }) {
+function JobCard({ job, index, onApply }: { job: typeof openings[0]; index: number; onApply: () => void }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -243,7 +243,7 @@ function JobCard({ job, index }: { job: typeof openings[0]; index: number }) {
             </ul>
           </div>
           <button
-            onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+            onClick={onApply}
             className="btn-accent flex items-center gap-2 px-8 py-3.5"
           >
             Apply for This Role
