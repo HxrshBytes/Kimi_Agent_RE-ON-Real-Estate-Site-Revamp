@@ -6,9 +6,9 @@ const properties = [
     id: 1,
     title: 'Navya Greens',
     location: 'Vajepur, Panvel, Navi Mumbai, Maharashtra, India',
-    image: '/gallery_navya_greens_sunset.png',
+    image: '/navya-cover.jpeg',
     images: [
-      '/gallery_navya_greens_sunset.png',
+      '/navya-cover.jpeg',
       '/gallery_navya_greens_aerial.jpg',
       '/gallery_navya_greens_map.png',
       '/gallery_navya_greens_plots.jpg',
