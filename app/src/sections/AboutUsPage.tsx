@@ -4,17 +4,17 @@ import Footer from './Footer';
 
 const leadership = [
   {
-    name: 'Sanchit Revandkar',
-    role: 'Founder & Visionary',
-    bio: 'With over 13 years of distinguished experience in the premium real estate market, Sanchit brings unparalleled expertise and strategic vision. He pioneers the mandate-only model in India, elevating property curation through a design-first philosophy and ensuring every RE-ON home is experienced as an exclusive masterpiece of luxury living.',
-    image: '/sanchit_new.jpeg',
+    name: 'Yassar K. Rawthar',
+    role: 'Founder & Head of Strategic Sales & Marketing',
+    bio: 'Leveraging 16 years of specialized experience in strategic sales and marketing within the real estate sector, Yassar drives RE-ON\'s growth and market presence. His innovative strategies and deep understanding of buyer dynamics ensure that every curated property flawlessly connects with its ideal audience.',
+    image: '/yassar_new.jpeg',
     flip: false
   },
   {
-    name: 'Yassar K. Rawthar',
-    role: 'Head of Strategic Sales & Marketing',
-    bio: 'Leveraging 16 years of specialized experience in strategic sales and marketing within the real estate sector, Yassar drives RE-ON\'s growth and market presence. His innovative strategies and deep understanding of buyer dynamics ensure that every curated property flawlessly connects with its ideal audience.',
-    image: '/yassar_new.jpeg',
+    name: 'Sanchit Revandkar',
+    role: 'Co-founder & Visionary',
+    bio: 'With over 13 years of distinguished experience in the premium real estate market, Sanchit brings unparalleled expertise and strategic vision. He pioneers the mandate-only model in India, elevating property curation through a design-first philosophy and ensuring every RE-ON home is experienced as an exclusive masterpiece of luxury living.',
+    image: '/sanchit_new.jpeg',
     flip: false
   }
 ];
