@@ -139,8 +139,8 @@ export default function AboutUsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
                 {leadership.map((leader) => (
                     <div key={leader.name} className="mb-12">
-                        <div className="w-full h-[500px] rounded-3xl overflow-hidden mb-8 relative">
-                            <img src={leader.image} alt={leader.name} className={`w-full h-full object-cover object-center ${leader.flip ? '-scale-x-100' : ''}`} />
+                        <div className="w-full aspect-[4/5] lg:aspect-[3/4] rounded-[2rem] overflow-hidden mb-8 relative">
+                            <img src={leader.image} alt={leader.name} className={`w-full h-full object-cover object-top ${leader.flip ? '-scale-x-100' : ''}`} />
                         </div>
                         <h3 className="font-display font-black text-3xl text-reon-cream mb-2">{leader.name}</h3>
                         <p className="text-reon-red text-xs uppercase tracking-widest font-semibold mb-6">{leader.role}</p>
