@@ -312,7 +312,7 @@ export default function CareerPage() {
             className="flex flex-wrap gap-12 mt-14 transition-all duration-1000 delay-300"
             style={{ opacity: heroVisible ? 1 : 0, transform: heroVisible ? 'translateY(0)' : 'translateY(30px)' }}
           >
-            {[['₹500Cr+', 'Mandates Managed'], ['3', 'Cities Active'], ['12', 'Team Members'], ['100%', 'Mandate-Only Model']].map(([num, label]) => (
+            {[['₹30Cr+', 'Mandates Managed'], ['3', 'Cities Active'], ['12', 'Team Members'], ['100%', 'Mandate-Only Model']].map(([num, label]) => (
               <div key={label}>
                 <p className="font-display font-black text-reon-cream text-3xl mb-1">{num}</p>
                 <p className="text-reon-gray text-xs uppercase tracking-widest">{label}</p>

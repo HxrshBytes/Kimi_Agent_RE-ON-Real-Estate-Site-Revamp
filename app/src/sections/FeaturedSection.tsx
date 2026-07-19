@@ -36,8 +36,8 @@ export default function FeaturedSection() {
         }`}
       >
         <img 
-          src="/gallery_navya_greens.jpg" 
-          alt="Navya Greens"
+          src="/hero_mountain.webp" 
+          alt="Adventure Outdoor"
           className="w-full h-full object-cover"
         />
         <div className="image-overlay" />
@@ -50,14 +50,19 @@ export default function FeaturedSection() {
         }`}
       >
         {/* Card Image */}
-        <div className="w-full h-[40vh] lg:h-[52%] overflow-hidden">
+        <div className="w-full h-[40vh] lg:h-[52%] overflow-hidden relative">
           <img 
-            src="/gallery_navya_greens.jpg" 
-            alt="Navya Greens"
+            src="/hero_mountain.webp" 
+            alt="Adventure Outdoor"
             className={`w-full h-full object-cover transition-all duration-1000 delay-300 ${
               isInView ? 'scale-100 translate-y-0' : 'scale-105 translate-y-[6%]'
             }`}
           />
+          <div className="absolute bottom-6 left-5 lg:bottom-8 lg:left-6 z-10">
+            <h2 className="text-white font-display font-black text-2xl lg:text-3xl leading-none shadow-sm">
+              ADVENTURE<br />OUTDOOR
+            </h2>
+          </div>
         </div>
         
         {/* Card Content */}
@@ -79,14 +84,14 @@ export default function FeaturedSection() {
 
       {/* Right Side Content */}
       <h2 
-        className={`absolute left-4 lg:left-[62vw] right-4 lg:right-auto top-auto lg:top-[44vh] bottom-[15vh] lg:bottom-auto headline-lg text-reon-cream text-[clamp(1.5rem,5vw,3rem)] transition-all duration-1000 delay-400 ${
+        className={`absolute left-4 lg:left-[55vw] right-4 lg:right-auto top-auto lg:top-[55vh] bottom-[15vh] lg:bottom-auto headline-lg text-reon-cream text-[clamp(1.5rem,5vw,3rem)] transition-all duration-1000 delay-400 ${
           isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[18vw]'
         }`}
       >
         SELECTED WORK
       </h2>
       <p 
-        className={`hidden lg:block absolute left-[62vw] top-[54vh] w-[28vw] text-reon-gray text-base leading-relaxed transition-all duration-1000 delay-500 ${
+        className={`hidden lg:block absolute left-[55vw] top-[65vh] w-[35vw] text-reon-gray text-base leading-relaxed transition-all duration-1000 delay-500 ${
           isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[18vw]'
         }`}
       >

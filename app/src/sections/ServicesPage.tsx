@@ -1,29 +1,24 @@
 import { useEffect, useState } from 'react';
-import { ChevronDown, ArrowRight, Home, Building2, Key, Handshake } from 'lucide-react';
+import { ChevronDown, ArrowRight, Handshake, TrendingUp, Layers } from 'lucide-react';
 import GallerySection from './GallerySection';
 import Footer from './Footer';
 
 const servicesList = [
   {
-    title: 'Property Curation & Search',
-    description: 'We handpick extraordinary properties that meet our stringent criteria for design, location, and potential. Our search process is tailored to your unique lifestyle requirements.',
-    icon: Home,
-  },
-  {
-    title: 'Mandate & Representation',
-    description: 'Our exclusive mandate model ensures that we dedicate our full resources to representing a select few exceptional properties, guaranteeing focused and strategic marketing.',
+    title: 'Developer Partnerships',
+    description: 'Building long-term partnerships through mandates, strategic collaborations, and growth-focused business solutions.',
     icon: Handshake,
   },
   {
-    title: 'Investment Advisory',
-    description: 'Leveraging our deep market insights and financial acumen, we provide strategic advice to help you make informed decisions in the premium real estate market.',
-    icon: Building2,
+    title: 'Sales Acceleration',
+    description: 'Driving qualified leads, managing channel partners, executing marketing campaigns, and converting opportunities into sales.',
+    icon: TrendingUp,
   },
   {
-    title: 'Turnkey Solutions',
-    description: 'From acquisition to interior design and move-in, we offer comprehensive turnkey solutions that ensure a seamless transition into your new luxury space.',
-    icon: Key,
-  }
+    title: 'Complete Project Ecosystem',
+    description: 'One partner for every stage of development — from concept and approvals to marketing, sales, and handover.',
+    icon: Layers,
+  },
 ];
 
 export default function ServicesPage() {
@@ -67,11 +62,12 @@ export default function ServicesPage() {
               className="headline-xl text-reon-cream mb-8 leading-tight"
               style={{ fontSize: 'clamp(3rem, 7vw, 5.5rem)' }}
             >
-              EXCEPTIONAL <span className="text-reon-red">SERVICES</span><br />
-              FOR DISCERNING CLIENTS.
+              ONE PARTNER.<br />
+              <span className="text-reon-red">EVERY REAL ESTATE</span><br />
+              SOLUTION.
             </h1>
             <p className="text-reon-gray text-lg leading-loose max-w-3xl">
-              We offer a suite of specialized real estate services designed to meet the rigorous demands of the luxury market. Our approach is bespoke, strategic, and profoundly client-centric.
+              Our goal is to provide real estate developers with a <span className="text-reon-cream font-medium">systematic and organized solution.</span> We simplify partnerships, business proposals, and mandate proposals — while delivering a <span className="text-reon-red font-semibold">complete, project-based solution</span> under one roof.
             </p>
           </div>
         </div>
@@ -92,11 +88,17 @@ export default function ServicesPage() {
                   Our Expertise
                 </p>
                 <h2 className="headline-lg text-4xl lg:text-5xl leading-tight">
-                    Comprehensive Real Estate <br/> <span className="text-reon-red italic">Advisory & Management.</span>
+                    Our goal is to provide real estate developers with a <span className="text-reon-red italic">systematic &amp; organized solution.</span>
                 </h2>
+                <p className="text-reon-gray text-lg leading-loose max-w-3xl mt-6">
+                    We simplify partnerships, business proposals, and mandate proposals — while delivering a <span className="text-reon-cream font-medium">complete, project-based solution</span> under one roof.
+                </p>
+                <p className="text-reon-cream/70 text-base italic mt-4 border-l-2 border-reon-red pl-4">
+                    Smart planning. Clear strategy. Strong execution. We help developers position every project for maximum market success.
+                </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
                 {servicesList.map((service, index) => (
                     <div key={index} className="group p-8 rounded-3xl border border-white/10 bg-reon-green/50 hover:bg-reon-green transition-colors duration-500">
                         <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-reon-red/10 transition-all duration-500">
