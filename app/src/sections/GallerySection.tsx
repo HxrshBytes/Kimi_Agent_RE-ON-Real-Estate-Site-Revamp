@@ -5,7 +5,7 @@ const properties = [
   {
     id: 1,
     title: 'Navya Greens',
-    location: 'Navi Mumbai',
+    location: 'Vajepur, Panvel, Navi Mumbai, Maharashtra, India',
     image: '/gallery_navya_greens_sunset.png',
     images: [
       '/gallery_navya_greens_sunset.png',
@@ -19,7 +19,7 @@ const properties = [
   {
     id: 2,
     title: ' Square Ornate ',
-    location: 'Navi Mumbai',
+    location: 'Ghot Taloja, Navi Mumbai, Maharashtra, India',
     image: '/gallery_ornate_facade.jpg',
     images: [
       '/gallery_ornate_facade.jpg',
@@ -34,7 +34,7 @@ const properties = [
   {
     id: 3,
     title: ' 4D Avanya ',
-    location: 'Navi Mumbai',
+    location: 'Panvel, Navi Mumbai, Maharashtra, India',
     image: '/gallery_avanya_facade.png',
     images: [
       '/gallery_avanya_facade.png',

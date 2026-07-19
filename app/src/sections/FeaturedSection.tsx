@@ -71,7 +71,7 @@ export default function FeaturedSection() {
             Navya Greens
           </h3>
           <p className="text-reon-gray text-xs lg:text-sm mb-3 lg:mb-4">
-            Waje, Panvel, Navi Mumbai, Maharashtra, India · Premium Residential Plots
+            Vajepur, Panvel, Navi Mumbai, Maharashtra, India · Premium Residential Plots
           </p>
           <p className="font-display font-bold text-reon-red text-xl lg:text-2xl mb-4 lg:mb-auto">
             On Request
