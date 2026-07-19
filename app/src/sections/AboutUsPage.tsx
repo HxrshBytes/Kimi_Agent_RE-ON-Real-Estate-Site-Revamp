@@ -6,7 +6,7 @@ const leadership = [
   {
     name: 'Yassar K. Rawthar',
     role: 'Founder & Head of Strategic Sales & Marketing',
-    bio: 'Leveraging 16 years of specialized experience in strategic sales and marketing within the real estate sector, Yassar drives RE-ON\'s growth and market presence. His innovative strategies and deep understanding of buyer dynamics ensure that every curated property flawlessly connects with its ideal audience.',
+    bio: <><strong>Yassar</strong> is the Founder of RE-ON, with over 17 years of experience in real estate sales and marketing. His strategic vision, market expertise, and customer-centric approach have been key to driving the company's growth. Passionate about innovation and excellence, he is committed to connecting clients with the right real estate opportunities while delivering a seamless and transparent experience.</>,
     image: '/yassar_new.jpeg',
     flip: false
   },
