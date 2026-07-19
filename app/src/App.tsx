@@ -14,6 +14,7 @@ import Footer from './sections/Footer';
 import CareerPage from './sections/CareerPage';
 import AboutUsPage from './sections/AboutUsPage';
 import ContactUsPage from './sections/ContactUsPage';
+import ServicesPage from './sections/ServicesPage';
 
 import './index.css';
 
@@ -70,6 +71,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/services" element={<ServicesPage />} />
           <Route path="/career" element={<CareerPage />} />
           <Route path="/contact" element={<ContactUsPage />} />
         </Routes>

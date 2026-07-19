@@ -22,6 +22,8 @@ export default function ContactSection() {
     city: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -43,9 +45,38 @@ export default function ContactSection() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for your message! We will get back to you within 2 business days.');
+    setIsSubmitting(true);
+    setSubmitSuccess(false);
+
+    try {
+      const url = import.meta.env.VITE_GOOGLE_SHEETS_WEBAPP_URL;
+      
+      if (!url || url === 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
+        alert('Form submission is not configured yet. Please set the Web App URL.');
+        setIsSubmitting(false);
+        return;
+      }
+
+      await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      setSubmitSuccess(true);
+      setFormData({ name: '', email: '', phone: '', city: '', message: '' });
+      setTimeout(() => setSubmitSuccess(false), 5000);
+
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert('There was an error submitting your message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -213,13 +244,19 @@ export default function ContactSection() {
               </div>
               <button 
                 type="submit" 
+                disabled={isSubmitting}
                 className={`btn-accent w-full transition-all duration-500 ${
                   isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[18px]'
-                }`}
+                } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                 style={{ transitionDelay: '600ms' }}
               >
-                Send message
+                {isSubmitting ? 'Sending...' : submitSuccess ? 'Message Sent!' : 'Send message'}
               </button>
+              {submitSuccess && (
+                <p className="text-reon-red text-sm text-center mt-4">
+                  Thank you for your message! We will get back to you within 2 business days.
+                </p>
+              )}
             </form>
           </div>
         </div>
