@@ -175,7 +175,7 @@ function ApplyModal({ job, onClose }: { job: typeof openings[0]; onClose: () => 
 }
 
 /* ─── JOB CARD ─────────────────────────────────────────────── */
-function JobCard({ job, index, onApply }: { job: typeof openings[0]; index: number; onApply: () => void }) {
+function JobCard({ job, index }: { job: typeof openings[0]; index: number }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
