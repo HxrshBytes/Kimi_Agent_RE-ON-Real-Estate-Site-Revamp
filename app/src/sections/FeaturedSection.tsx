@@ -36,7 +36,7 @@ export default function FeaturedSection() {
         }`}
       >
         <img 
-          src="/hero_mountain.webp" 
+          src="/wmremove-transformed.webp" 
           alt="Adventure Outdoor"
           className="w-full h-full object-cover"
         />
@@ -52,7 +52,7 @@ export default function FeaturedSection() {
         {/* Card Image */}
         <div className="w-full h-[40vh] lg:h-[52%] overflow-hidden relative">
           <img 
-            src="/hero_mountain.webp" 
+            src="/wmremove-transformed.webp" 
             alt="Adventure Outdoor"
             className={`w-full h-full object-cover transition-all duration-1000 delay-300 ${
               isInView ? 'scale-100 translate-y-0' : 'scale-105 translate-y-[6%]'
