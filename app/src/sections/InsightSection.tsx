@@ -1,10 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const stats = [
-  { value: '18+', label: 'Mandates' },
-  { value: '₹340Cr+', label: 'Sales' },
-  { value: '4.9/5', label: 'Buyer rating' },
-];
+
 
 export default function InsightSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -62,25 +58,7 @@ export default function InsightSection() {
           We combine local transaction data with architectural storytelling—so pricing is credible and presentation is memorable.
         </p>
         
-        {/* Stats Row */}
-        <div className="flex gap-4 lg:gap-6 mt-auto">
-          {stats.map((stat, index) => (
-            <div 
-              key={index} 
-              className={`transition-all duration-700 ${
-                isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-              }`}
-              style={{ transitionDelay: `${300 + index * 80}ms` }}
-            >
-              <p className="font-display font-bold text-reon-red text-xl lg:text-2xl mb-1">
-                {stat.value}
-              </p>
-              <p className="text-reon-gray text-xs uppercase tracking-wider">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
+
       </div>
 
       {/* Right Thumbnail Chip - Hidden on mobile */}
