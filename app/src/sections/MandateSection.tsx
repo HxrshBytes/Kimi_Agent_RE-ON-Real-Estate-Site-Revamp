@@ -56,7 +56,7 @@ export default function MandateSection() {
           We take limited mandates. We invest in storytelling, staging, and sales strategy—so developments move faster without discounting.
         </p>
         <button 
-          onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+          onClick={() => window.open('https://wa.me/918591944460?text=lets%20start%20together', '_blank')}
           className="btn-accent w-fit"
         >
           Partner with us

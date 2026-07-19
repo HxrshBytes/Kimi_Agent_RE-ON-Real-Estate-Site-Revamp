@@ -93,7 +93,7 @@ export default function Navigation() {
 
           {/* CTA */}
           <button 
-            onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+            onClick={() => window.open('https://wa.me/918591944460?text=lets%20start%20together', '_blank')}
             className="btn-accent w-full"
           >
             Start a project

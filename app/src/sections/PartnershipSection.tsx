@@ -69,7 +69,7 @@ export default function PartnershipSection() {
           From pricing strategy to channel partner enablement, we operate as a seamless layer between product and market.
         </p>
         <button 
-          onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+          onClick={() => window.open('https://wa.me/918591944460?text=lets%20start%20together', '_blank')}
           className="btn-accent w-fit"
         >
           Request a proposal

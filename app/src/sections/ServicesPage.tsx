@@ -114,7 +114,7 @@ export default function ServicesPage() {
             
             <div className="mt-20 flex justify-center">
                 <button 
-                  onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+                  onClick={() => window.open('https://wa.me/918591944460?text=lets%20start%20together', '_blank')}
                   className="btn-accent flex items-center gap-3 px-8 py-4"
                 >
                     Get in Touch <ArrowRight className="w-5 h-5" />

@@ -60,7 +60,7 @@ export default function ClosingSection() {
           If you're a developer with a product that values design, we should talk.
         </p>
         <button 
-          onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+          onClick={() => window.open('https://wa.me/918591944460?text=lets%20start%20together', '_blank')}
           className={`btn-accent transition-all duration-1000 delay-200 ${
             isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}

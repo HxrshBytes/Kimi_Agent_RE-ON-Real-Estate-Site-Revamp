@@ -309,7 +309,7 @@ export default function GallerySection() {
                 </div>
 
                 <button 
-                  onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+                  onClick={() => window.open('https://wa.me/918591944460?text=lets%20start%20together', '_blank')}
                   className="btn-accent w-full text-center py-4 text-sm tracking-wider"
                 >
                   Enquire About This Property

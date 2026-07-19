@@ -376,7 +376,7 @@ export default function CareerPage() {
             </p>
           </div>
           <button
-            onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+            onClick={() => window.open('https://wa.me/918591944460?text=lets%20start%20together', '_blank')}
             className="btn-accent flex items-center gap-2 px-10 py-5 whitespace-nowrap text-base"
           >
             Get In Touch

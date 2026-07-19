@@ -98,7 +98,7 @@ export default function AboutUsPage() {
                 </div>
                 
                 <button 
-                  onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+                  onClick={() => window.open('https://wa.me/918591944460?text=lets%20start%20together', '_blank')}
                   className="btn-accent mt-4 flex items-center gap-3 px-8 py-4"
                 >
                     Explore Our Services <ArrowRight className="w-5 h-5" />

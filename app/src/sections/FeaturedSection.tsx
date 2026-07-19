@@ -77,7 +77,7 @@ export default function FeaturedSection() {
             On Request
           </p>
           <button 
-            onClick={() => window.open('https://wa.me/918591944460', '_blank')}
+            onClick={() => window.open('https://wa.me/918591944460?text=lets%20start%20together', '_blank')}
             className="btn-accent text-sm py-2 lg:py-3 px-4 lg:px-5 w-fit mt-4 lg:mt-0"
           >
             Request details
