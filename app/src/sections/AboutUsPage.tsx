@@ -13,7 +13,7 @@ const leadership = [
   {
     name: 'Sanchit Revandkar',
     role: 'Co-founder & Visionary',
-    bio: 'With over 13 years of distinguished experience in the premium real estate market, Sanchit brings unparalleled expertise and strategic vision. He pioneers the mandate-only model in India, elevating property curation through a design-first philosophy and ensuring every RE-ON home is experienced as an exclusive masterpiece of luxury living.',
+    bio: <>Leveraging over 14 years of experience in civil engineering, construction, and real estate, <strong>Sanchit</strong> co-founded RE-ON with a vision to bridge technical excellence and strategic business solutions. His expertise in project development, developer relations, and market execution helps transform ideas into successful, high-performing real estate projects.</>,
     image: '/sanchit_new.jpeg',
     flip: false
   }
