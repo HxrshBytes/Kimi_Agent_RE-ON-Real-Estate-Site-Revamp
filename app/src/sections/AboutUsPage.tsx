@@ -6,18 +6,94 @@ const leadership = [
   {
     name: 'Yassar K. Rawthar',
     role: 'Founder & Head of Strategic Sales & Marketing',
-    bio: <><strong>Yassar</strong> is the Founder of RE-ON, with over 17 years of experience in real estate sales and marketing. His strategic vision, market expertise, and customer-centric approach have been key to driving the company's growth. Passionate about innovation and excellence, he is committed to connecting clients with the right real estate opportunities while delivering a seamless and transparent experience.</>,
+    bio: (
+      <div className="space-y-4">
+        <p><strong>Yassar</strong> is the Founder of RE-ON, with over 17 years of experience in real estate sales and marketing. His strategic vision, market expertise, and customer-centric approach have been key to driving the company's growth. Passionate about innovation and excellence, he is committed to connecting clients with the right real estate opportunities while delivering a seamless and transparent experience.</p>
+        
+        <p><strong>16 Years of Building Real Estate Sales, Marketing & Growth</strong><br/>
+        His journey in real estate began in 2010, founding Zara Homes with a clear objective — to create a strong bridge between real estate developers and the right customers. Zara Homes focused on helping developers strategically market and sell their residential and commercial inventories through the channel partner model.</p>
+        
+        <p><strong>The Zara Homes Era — 2010 to 2022</strong><br/>
+        Over 12 years, Zara Homes became a trusted sales and marketing partner for multiple real estate developers. Through this approach, Yassar developed a reputation for helping developers move inventory within challenging market conditions and creating predictable sales pipelines.</p>
+        
+        <p><strong>Revaa Homes — The Next Evolution</strong><br/>
+        In 2023, he took the next step with Revaa Homes. The objective was to upgrade the traditional real estate sales model by combining technology, modern marketing and structured sales systems. Revaa Homes strengthened his position as a strategic sales and marketing partner for developers.</p>
+        
+        <p><strong>Today</strong><br/>
+        Through RE-ON Real Estate, Yassar is working towards creating a more structured, technology-driven and performance-oriented real estate platform. The vision is to build an organisation that developers can rely on for strategic marketing, qualified customers, strong sales funnels, faster inventory movement, and predictable sales performance.</p>
+      </div>
+    ),
     image: '/yassar_new.jpeg',
     flip: false
   },
   {
     name: 'Sanchit Revandkar',
     role: 'Co-founder & Visionary',
-    bio: <>Leveraging over 14 years of experience in civil engineering, construction, and real estate, <strong>Sanchit</strong> co-founded RE-ON with a vision to bridge technical excellence and strategic business solutions. His expertise in project development, developer relations, and market execution helps transform ideas into successful, high-performing real estate projects.</>,
+    bio: (
+      <div className="space-y-4">
+        <p>Leveraging over 14 years of experience in civil engineering, construction, and real estate, <strong>Sanchit</strong> co-founded RE-ON with a vision to bridge technical excellence and strategic business solutions. His expertise in project development, developer relations, and market execution helps transform ideas into successful, high-performing real estate projects.</p>
+        
+        <p><strong>Building Businesses. Creating Value. Driving Real Estate Growth.</strong><br/>
+        Sanchit Prakash Revandkar is an entrepreneur and real estate professional with a strong background spanning construction, real estate development, sales, marketing, and strategic monetisation of real estate inventory. His journey in real estate began at the ground level—with construction activities and execution.</p>
+        
+        <p><strong>Prakash Enterprises — A One-Stop Construction Solution</strong><br/>
+        Prakash Enterprises was developed as a one-stop solution for real estate developers, operating on a lock-and-key construction model. Through this journey, Sanchit gained extensive exposure to the complete lifecycle of real estate projects.</p>
+        
+        <p><strong>Entering Real Estate Operations — SD Developers & Consultants Pvt. Ltd.</strong><br/>
+        In 2017, Sanchit launched SD Developers & Consultants Pvt. Ltd., taking his entrepreneurial journey a step further into the ownership and operation of real estate.</p>
+        
+        <p><strong>NMP Empire Pvt. Ltd. — Creating a Cash-Flow Based Construction Model</strong><br/>
+        Sanchit co-founded NMP Empire Pvt. Ltd., with a distinctive objective: to create a business model that could support real estate developers through construction services combined with sales and marketing, particularly through barter-based arrangements.</p>
+        
+        <p><strong>The Journey So Far</strong><br/>
+        Sanchit continues to explore opportunities in real estate development, construction, land development, strategic sales and real estate monetisation, with a focus on creating commercially viable models that benefit both developers and end customers.</p>
+        
+        <p><strong>Today</strong><br/>
+        Through RE-ON Real Estate, Sanchit is working towards creating a more structured, technology-driven and performance-oriented real estate platform. The vision is to build an organisation that developers can rely on for strategic marketing, qualified customers, strong sales funnels, faster inventory movement, and predictable sales performance.</p>
+      </div>
+    ),
     image: '/sanchit_new.jpeg',
     flip: false
   }
 ];
+
+const LeaderCard = ({ leader }: { leader: typeof leadership[0] }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div className="mb-12">
+      <div className="w-full aspect-[4/5] lg:aspect-[3/4] rounded-[2rem] overflow-hidden mb-8 relative">
+        <img src={leader.image} alt={leader.name} className={`w-full h-full object-cover object-top ${leader.flip ? '-scale-x-100' : ''}`} />
+      </div>
+      <h3 className="font-display font-black text-3xl text-reon-cream mb-2">{leader.name}</h3>
+      <p className="text-reon-red text-xs uppercase tracking-widest font-semibold mb-6">{leader.role}</p>
+      
+      <div className="relative max-w-md">
+        <div className={`text-reon-gray text-sm leading-loose overflow-hidden transition-all duration-700 ${expanded ? 'max-h-[3000px]' : 'line-clamp-3'}`}>
+          {leader.bio}
+        </div>
+        {!expanded && (
+          <div className="absolute bottom-0 right-0 flex items-center justify-end pl-12 pr-1" style={{ background: 'linear-gradient(to right, transparent, #092e23 35%, #092e23)' }}>
+            <button 
+              onClick={() => setExpanded(true)} 
+              className="text-reon-gray font-bold hover:scale-[1.05] hover:text-reon-cream origin-right transition-all duration-300"
+            >
+              ...see more
+            </button>
+          </div>
+        )}
+        {expanded && (
+          <button 
+            onClick={() => setExpanded(false)} 
+            className="text-reon-gray font-bold hover:scale-[1.05] hover:text-reon-cream origin-left transition-all duration-300 mt-4 block"
+          >
+            ...see less
+          </button>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default function AboutUsPage() {
   const [heroVisible, setHeroVisible] = useState(false);
@@ -138,16 +214,7 @@ export default function AboutUsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
                 {leadership.map((leader) => (
-                    <div key={leader.name} className="mb-12">
-                        <div className="w-full aspect-[4/5] lg:aspect-[3/4] rounded-[2rem] overflow-hidden mb-8 relative">
-                            <img src={leader.image} alt={leader.name} className={`w-full h-full object-cover object-top ${leader.flip ? '-scale-x-100' : ''}`} />
-                        </div>
-                        <h3 className="font-display font-black text-3xl text-reon-cream mb-2">{leader.name}</h3>
-                        <p className="text-reon-red text-xs uppercase tracking-widest font-semibold mb-6">{leader.role}</p>
-                        <p className="text-reon-gray text-sm leading-loose max-w-md">
-                            {leader.bio}
-                        </p>
-                    </div>
+                    <LeaderCard key={leader.name} leader={leader} />
                 ))}
             </div>
         </div>
@@ -165,3 +232,4 @@ export default function AboutUsPage() {
     </div>
   );
 }
+
