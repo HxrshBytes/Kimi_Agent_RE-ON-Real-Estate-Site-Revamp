@@ -302,7 +302,7 @@
 .prop-detail__gallery-main:active {
   cursor: grabbing;
 }
-.prop-detail__gallery-main img {
+.prop-detail__gallery-main > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -446,7 +446,7 @@
   border-color: var(--red);
   box-shadow: 0 0 12px rgba(200, 16, 46, 0.4);
 }
-.prop-detail__thumb img {
+.prop-detail__thumb > img {
   width: 100%;
   height: 100%;
   object-fit: cover;

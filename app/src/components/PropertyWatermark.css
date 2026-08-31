@@ -17,26 +17,30 @@
 }
 
 /* Crisp Vector / Image Watermark */
-.property-watermark__svg,
-.property-watermark__img {
-  width: 42%;
-  max-width: 320px;
-  min-width: 120px;
-  height: auto;
-  opacity: 0.42;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8));
+.property-watermark-overlay .property-watermark__svg,
+.property-watermark-overlay .property-watermark__img {
+  width: 32% !important;
+  max-width: min(280px, 70%) !important;
+  max-height: 42% !important;
+  min-width: 80px !important;
+  height: auto !important;
+  opacity: 0.38;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
   transition: opacity 0.3s ease, transform 0.3s ease;
-  display: block;
-  object-fit: contain;
+  display: block !important;
+  object-fit: contain !important;
+  pointer-events: none !important;
+  transform: none !important;
 }
 
 /* Card Mode (Listing grid / Home / Cart) */
 .property-watermark-overlay--card .property-watermark__svg,
 .property-watermark-overlay--card .property-watermark__img {
-  width: 38%;
-  max-width: 200px;
-  min-width: 100px;
-  opacity: 0.38;
+  width: 30% !important;
+  max-width: min(180px, 60%) !important;
+  max-height: 38% !important;
+  min-width: 75px !important;
+  opacity: 0.35;
 }
 
 .prop-card:hover .property-watermark-overlay--card .property-watermark__svg,
@@ -44,33 +48,38 @@
 .cart-card:hover .property-watermark-overlay--card .property-watermark__svg,
 .cart-card:hover .property-watermark-overlay--card .property-watermark__img {
   opacity: 0.52;
-  transform: scale(1.03);
+  transform: scale(1.03) !important;
 }
 
 /* Detail Hero Gallery Mode */
 .property-watermark-overlay--hero .property-watermark__svg,
 .property-watermark-overlay--hero .property-watermark__img {
-  width: 32%;
-  max-width: 340px;
-  min-width: 180px;
-  opacity: 0.40;
+  width: 28% !important;
+  max-width: min(320px, 60%) !important;
+  max-height: 40% !important;
+  min-width: 140px !important;
+  opacity: 0.38;
 }
 
 /* Zoom Lightbox Mode */
 .property-watermark-overlay--lightbox .property-watermark__svg,
 .property-watermark-overlay--lightbox .property-watermark__img {
-  width: 26%;
-  max-width: 380px;
-  min-width: 200px;
-  opacity: 0.45;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9));
+  width: 24% !important;
+  max-width: min(360px, 55%) !important;
+  max-height: 35% !important;
+  min-width: 160px !important;
+  opacity: 0.42;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.5));
 }
 
 /* Thumbnails Filmstrip Mode */
 .property-watermark-overlay--thumb .property-watermark__svg,
 .property-watermark-overlay--thumb .property-watermark__img {
-  width: 50%;
-  max-width: 55px;
-  min-width: 32px;
-  opacity: 0.30;
+  width: 48% !important;
+  max-width: min(48px, 70%) !important;
+  max-height: 40% !important;
+  min-width: 22px !important;
+  opacity: 0.28;
 }
+
+

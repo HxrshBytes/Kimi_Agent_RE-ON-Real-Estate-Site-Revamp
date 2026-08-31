@@ -15,7 +15,7 @@ export default React.memo(function PropertyWatermark({
       aria-hidden="true"
     >
       <img
-        src="/images/reon-logo.png"
+        src="/images/reon-watermark.png?v=5"
         alt="RE-ON"
         className="property-watermark__img"
         loading="lazy"
