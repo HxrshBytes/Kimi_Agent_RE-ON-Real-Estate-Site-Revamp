@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Outer Burgundy Power Ring -->
+  <path d="M 32 28 A 36 36 0 1 0 68 28" fill="none" stroke="#7A1828" stroke-width="16" stroke-linecap="round"/>
+  <!-- Central Forest Green Power Bar -->
+  <line x1="50" y1="12" x2="50" y2="52" stroke="#006837" stroke-width="15" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: reon-backend
+    env: node
+    region: singapore # or oregon, frankfurt, etc.
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run server
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: MONGODB_URI
+        sync: false
+      - key: DB_NAME
+        value: sample_mflix
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CLIENT_ORIGIN
+        value: "*"

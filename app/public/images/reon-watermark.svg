@@ -1,0 +1,31 @@
+<svg viewBox="0 0 570 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="reon-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.75"/>
+    </filter>
+  </defs>
+  <g filter="url(#reon-shadow)" fill="#FFFFFF">
+    <!-- R -->
+    <path d="M20 15 H65 C80 15 90 24 90 38 C90 49 82 57 70 60 L94 95 H72 L51 63 H38 V95 H20 V15 Z M38 48 H63 C69 48 72 45 72 39 C72 33 69 30 63 30 H38 V48 Z" />
+    
+    <!-- E -->
+    <path d="M105 15 H155 V30 H123 V48 H150 V62 H123 V80 H155 V95 H105 V15 Z" />
+    
+    <!-- O (with Power Button Icon) -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M200 15 C224 15 242 33 242 55 C242 77 224 95 200 95 C176 95 158 77 158 55 C158 33 176 15 200 15 Z M200 31 C187 31 176 42 176 55 C176 68 187 79 200 79 C213 79 224 68 224 55 C224 42 213 31 200 31 Z" />
+    <!-- Vertical Power notch in O -->
+    <rect x="194" y="7" width="12" height="36" rx="6" fill="#FFFFFF" stroke="#000000" stroke-width="1.5" stroke-opacity="0.4" />
+    
+    <!-- N -->
+    <path d="M260 15 H277 L308 65 V15 H325 V95 H308 L277 45 V95 H260 V15 Z" />
+    
+    <!-- - (Hyphen) -->
+    <rect x="340" y="48" width="24" height="14" rx="4" />
+    
+    <!-- G -->
+    <path d="M415 15 C438 15 454 28 456 48 H437 C435 38 428 31 415 31 C399 31 388 42 388 55 C388 68 399 79 415 79 C427 79 435 73 437 63 H415 V49 H455 V72 C450 87 435 95 415 95 C389 95 371 77 371 55 C371 33 389 15 415 15 Z" />
+    
+    <!-- O -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M505 15 C529 15 547 33 547 55 C547 77 529 95 505 95 C481 95 463 77 463 55 C463 33 481 15 505 15 Z M505 31 C492 31 481 42 481 55 C481 68 492 79 505 79 C518 79 529 68 529 55 C529 42 518 31 505 31 Z" />
+  </g>
+</svg>

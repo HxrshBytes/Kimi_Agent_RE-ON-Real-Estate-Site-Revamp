@@ -1,0 +1,273 @@
+/* ── Universal Glassmorphism Select Dropdown ── */
+
+.glass-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 140px;
+  user-select: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.glass-select-wrapper--open {
+  z-index: 60;
+}
+
+/* Trigger Button — Ultra Sleek Capsule */
+.glass-select__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 6px 11px;
+  height: 35px;
+  border-radius: 9px;
+  border: 1px solid rgba(245, 245, 220, 0.12);
+  background: rgba(8, 26, 19, 0.85);
+  color: var(--cream, #f5f5dc);
+  font-size: 0.8rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.glass-select__trigger:hover {
+  border-color: rgba(245, 245, 220, 0.25);
+  background: rgba(12, 38, 28, 0.95);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+.glass-select__trigger:focus,
+.glass-select__trigger--active {
+  border-color: var(--red, #b41e1e);
+  background: rgba(14, 42, 32, 0.98);
+  box-shadow: 0 0 0 3px rgba(180, 30, 30, 0.18);
+}
+
+/* Active Value Pill Highlight */
+.glass-select__trigger--has-value {
+  border-color: rgba(180, 30, 30, 0.6);
+  background: rgba(180, 30, 30, 0.14);
+  color: #ffffff;
+}
+
+.glass-select__trigger-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  flex: 1;
+}
+
+.glass-select__icon {
+  color: var(--gray, #94a3b8);
+  flex-shrink: 0;
+}
+
+.glass-select__trigger--has-value .glass-select__icon {
+  color: var(--red, #b41e1e);
+}
+
+.glass-select__label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  font-size: 0.79rem;
+}
+
+.glass-select__chevron {
+  color: var(--gray, #94a3b8);
+  flex-shrink: 0;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-select__chevron--open {
+  transform: rotate(180deg);
+  color: var(--cream, #f5f5dc);
+}
+
+/* Frosted Glass Dropdown Popover */
+.glass-select__dropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  min-width: 190px;
+  max-height: 290px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  z-index: 9999;
+  
+  /* True Cross-Platform Glassmorphism */
+  background: rgba(11, 32, 24, 0.82);
+  -webkit-backdrop-filter: blur(28px) saturate(190%) brightness(95%);
+  backdrop-filter: blur(28px) saturate(190%) brightness(95%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  box-shadow: 
+    0 16px 36px rgba(0, 0, 0, 0.65),
+    0 4px 10px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+  
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5px;
+  
+  animation: glassDropIn 0.16s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top center;
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  .glass-select__dropdown {
+    background: rgba(11, 32, 24, 0.98);
+  }
+}
+
+@keyframes glassDropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Custom Sleek Scrollbar */
+.glass-select__dropdown::-webkit-scrollbar {
+  width: 4px;
+}
+
+.glass-select__dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.glass-select__dropdown::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.glass-select__dropdown::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.glass-select__dropdown {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+/* Option Items */
+.glass-select__option {
+  padding: 6.5px 8.5px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: rgba(245, 245, 220, 0.88);
+  font-size: 0.8rem;
+  transition: all 0.12s ease;
+  display: flex;
+  align-items: center;
+}
+
+.glass-select__option:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #ffffff;
+}
+
+.glass-select__option-content {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+}
+
+.glass-select__check {
+  width: 13px;
+  height: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  flex-shrink: 0;
+  transition: opacity 0.12s ease;
+}
+
+.glass-select__check--visible {
+  opacity: 1;
+}
+
+.glass-select__option-text {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Selected State (Identical to Apple Glass Highlight) */
+.glass-select__option--selected {
+  background: #3b82f6 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.35);
+}
+
+.glass-select__option--selected .glass-select__check {
+  opacity: 1;
+  color: #ffffff;
+}
+
+/* Mobile compact touch optimization */
+@media (max-width: 768px) {
+  .glass-select-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .glass-select__trigger {
+    padding: 6px 9px;
+    font-size: 0.75rem;
+    height: 33px;
+    border-radius: 8px;
+    gap: 5px;
+  }
+
+  .glass-select__trigger-left {
+    gap: 5px;
+  }
+
+  .glass-select__icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .glass-select__chevron {
+    width: 12px;
+    height: 12px;
+  }
+
+  .glass-select__label {
+    font-size: 0.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  .glass-select__dropdown {
+    min-width: 160px;
+    max-height: 250px;
+    padding: 3px;
+    border-radius: 11px;
+  }
+
+  .glass-select__option {
+    padding: 6px 7px;
+    font-size: 0.77rem;
+    border-radius: 6px;
+  }
+}

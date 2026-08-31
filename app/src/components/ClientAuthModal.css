@@ -1,0 +1,439 @@
+/* ═══════════════════════════════════════════════
+   RE-ON CLIENT AUTH & OTP MODAL — Premium Dark & Emerald Styling
+   ═══════════════════════════════════════════════ */
+
+.client-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  animation: modalFadeIn 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Modal Box: Rich Frosted Emerald Green Glass */
+.client-modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  background: linear-gradient(145deg, rgba(16, 75, 54, 0.96) 0%, rgba(9, 44, 31, 0.98) 100%);
+  backdrop-filter: blur(30px) saturate(190%);
+  -webkit-backdrop-filter: blur(30px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 28px;
+  padding: 32px 28px;
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.6),
+    0 4px 16px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3);
+  animation: modalSlideUp 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Close Button */
+.client-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fca5a5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  pointer-events: auto;
+  transition: all 0.25s ease;
+}
+
+.client-modal-close:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(239, 68, 68, 0.5);
+  color: #fee2e2;
+  transform: rotate(90deg);
+}
+
+/* Header */
+.client-modal-step {
+  animation: modalFadeIn 0.3s ease both;
+}
+
+.client-modal-header {
+  margin-bottom: 22px;
+}
+
+.client-modal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: linear-gradient(135deg, rgba(185, 28, 28, 0.9) 0%, rgba(140, 16, 16, 0.95) 100%);
+  border: 1px solid rgba(248, 113, 113, 0.4);
+  border-radius: 100px;
+  color: #fca5a5;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.client-modal-badge--otp {
+  background: linear-gradient(135deg, rgba(20, 90, 66, 0.95) 0%, rgba(13, 68, 50, 0.95) 100%);
+  border-color: rgba(74, 222, 128, 0.4);
+  color: #86efac;
+}
+
+.client-modal-header h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+}
+
+.client-modal-header p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.client-modal-phone-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 6px;
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.8);
+  flex-wrap: wrap;
+}
+
+.client-modal-phone-info strong {
+  color: #86efac;
+}
+
+.client-modal-edit-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  color: #fca5a5;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.client-modal-edit-phone:hover {
+  color: #fff;
+}
+
+/* Form inputs */
+.client-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.client-modal-error {
+  padding: 10px 14px;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 12px;
+  color: #fecaca;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.client-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.client-input-group label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.01em;
+}
+
+.client-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.client-input-wrap:focus-within {
+  border-color: #86efac;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.25);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.client-input-prefix {
+  padding: 12px 12px 12px 16px;
+  color: #86efac;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.client-input-icon {
+  position: absolute;
+  left: 14px;
+  color: #86efac;
+  pointer-events: none;
+}
+
+.client-input-wrap input {
+  width: 100%;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  outline: none;
+}
+
+.client-input-wrap input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.client-input-wrap input[type="text"] {
+  padding-left: 42px;
+}
+
+.client-input-hint {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.4;
+}
+
+/* ── 6-Digit OTP Boxes ── */
+.client-otp-boxes {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.client-otp-box {
+  width: 100%;
+  height: 54px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.client-otp-box:focus {
+  border-color: #86efac;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.3);
+  transform: translateY(-2px);
+}
+
+.client-otp-box--filled {
+  border-color: rgba(74, 222, 128, 0.6);
+  background: rgba(20, 90, 66, 0.3);
+  color: #86efac;
+}
+
+/* Dev/Demo Instant Autofill Pill */
+.client-otp-dev-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(20, 90, 66, 0.4);
+  border: 1px dashed rgba(74, 222, 128, 0.4);
+  border-radius: 100px;
+  color: #86efac;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.client-otp-dev-pill:hover {
+  background: rgba(20, 90, 66, 0.7);
+  border-color: rgba(74, 222, 128, 0.8);
+  transform: scale(1.02);
+}
+
+.client-otp-dev-pill strong {
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+/* Resend Row */
+.client-otp-resend-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  margin-top: 2px;
+}
+
+.client-otp-timer {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.client-otp-timer strong {
+  color: #86efac;
+}
+
+.client-otp-resend-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: #86efac;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.client-otp-resend-btn:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Submit Button: Red/Emerald Accent */
+.client-modal-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 650;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow:
+    0 6px 20px rgba(16, 185, 129, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+.client-modal-submit:hover:not(:disabled) {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(16, 185, 129, 0.5);
+}
+
+.client-modal-submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Security Footer */
+.client-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.client-modal-footer svg {
+  color: #86efac;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .client-modal-card {
+    padding: 24px 18px;
+    border-radius: 24px;
+  }
+
+  .client-modal-header h2 {
+    font-size: 1.35rem;
+  }
+
+  .client-otp-boxes {
+    gap: 6px;
+  }
+
+  .client-otp-box {
+    height: 48px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+  }
+}
+
