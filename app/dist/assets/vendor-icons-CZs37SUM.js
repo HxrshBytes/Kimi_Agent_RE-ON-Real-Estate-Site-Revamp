@@ -1,4 +1,4 @@
-import{r as c}from"./vendor-clerk-JarAWaZv.js";/**
+import{r as c}from"./vendor-clerk-DoFlt_ty.js";/**
  * @license lucide-react v0.460.0 - ISC
  *
  * This source code is licensed under the ISC license.
